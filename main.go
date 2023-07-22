@@ -6,12 +6,10 @@ import (
 	"log"
 	"net/http"
 	"time"
-
-	"gamestop/internal"
 )
 
 func main() {
-	monitor, err := internal.NewGamestopHandler("gamestop")
+	monitor, err := NewGamestopHandler("gamestop")
 
 	if err != nil {
 		log.Fatalf("can not boot monitor: %s", err.Error())

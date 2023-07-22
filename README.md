@@ -1,6 +1,6 @@
 # Gamestop Monitor
 
-The **Gamestop Monitor** is a simple Go application that periodically monitors the availability of products on the Gamestop website. It collects data from the specified URL and evaluates the availability of products to notify users about any changes in product availability. This project utilizes the external dependency, [goquery](https://github.com/PuerkitoBio/goquery), to scrape and parse HTML data.
+The **Gamestop Monitor** is a simple Go application that periodically monitors the availability of products on the Gamestop website. It collects data from the specified URL and evaluates the availability of products to notify users about any changes in product availability.
 
 ## Features
 
@@ -21,11 +21,16 @@ Before running the Gamestop Monitor, ensure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/gamestop-monitor.git
-   cd gamestop-monitor
+   git clone https://github.com/mr-meselmani/gamestop-monitor.git
    ```
 
-2. Fetch and download the dependencies:
+2. CD to project:
+
+   ```
+    cd gamestop-monitor
+   ```
+
+3. Fetch and download the dependencies:
 
    ```bash
    go mod download
@@ -36,7 +41,7 @@ Before running the Gamestop Monitor, ensure you have the following installed:
 To start monitoring Gamestop products, run the main application:
 
 ```bash
-go run cmd/main.go
+go run .
 ```
 
 The application will begin monitoring the Gamestop URL specified in the `main.go` file. It will periodically check for product availability and generate messages for newly available products. The monitoring runs for ten iterations and then stops, but you can customize the run duration or limit as needed.
@@ -46,7 +51,6 @@ The application will begin monitoring the Gamestop URL specified in the `main.go
 1. URL: The default URL to monitor is set in the `main.go` file. If you want to monitor a different Gamestop URL, modify the `url` parameter in the `main.go` file.
 
 2. Run Duration: You can adjust the duration between monitoring runs by modifying the `time.Sleep()` value in the `main.go` file.
-
 
 ## License
 
